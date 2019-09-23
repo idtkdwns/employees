@@ -8,6 +8,13 @@
 </head>
 <body>
 	<h1>부서목록</h1>
+	<%
+		// List<Departments> list = (List<Departments>)request.getAttribute("list"); 자바로 list 가져오는방법
+		// ${list} el로 줄인방법 
+	%>
+	<div>
+		<a href="${pageContext.request.contextPath}/index">홈으로</a>
+	</div>
 	<table>
 		<thead>
 			<tr>
