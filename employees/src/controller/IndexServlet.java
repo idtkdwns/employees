@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.*;
 //URL 요청
-@WebServlet("/index")
+@WebServlet({"/","/index"})///두개로 요청가능
 public class IndexServlet extends HttpServlet {
 	
 	private EmployeesDao employeesDao;
@@ -46,13 +46,13 @@ public class IndexServlet extends HttpServlet {
 		//RequestDispatcher rd=request.getRequestDispatcher("WEB-INF/views/index.jsp");
 		//rd.forward(request, response);
 		
-				request.setAttribute("employeesRowCount", employeesRowCount);
+				request.setAttribute("employeesRowCount", employeesRowCount);//view한테도 값을 넘겨줘야함
 				request.setAttribute("departmentsRowCount", departmentsRowCount);
 				request.setAttribute("deptManagerRowCount", deptManagerRowCount);
 				request.setAttribute("deptEmpRowCount", deptEmpRowCount);
 				request.setAttribute("titlesRowCount", titlesRowCount);
 				request.setAttribute("salariesRowCount",salariesRowCount);
 				
-				request.getRequestDispatcher("/WEB-INF/views/index.jsp").forward(request, response);
+				request.getRequestDispatcher("/WEB-INF/views/index.jsp").forward(request, response);//포워드는 넘기는것
 	}
 }

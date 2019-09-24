@@ -86,7 +86,7 @@ public class EmployeesDao {
 		}
 		return list;
 	}
-	public int selectEmployeesCount(){//몇행인지 알기위한 메소드
+	public int selectEmployeesRowCount(){//몇행인지 알기위한 메소드
 		int count =0;
 		final String sql="SELECT COUNT(*) FROM employees";//바꾸지못한다
 		Connection conn= null;

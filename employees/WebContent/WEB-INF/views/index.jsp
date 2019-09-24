@@ -54,10 +54,12 @@
 			<a href="${pageContext.request.contextPath}/employees/getEmployeesListOrderBy?order=asc"></a>
 			<a href="${pageContext.request.contextPath}/employees/getEmployeesListOrderBt?order=desc"></a>
 		</li>
-	</div>
-	<div>
-		표현식->employees table total row count: <%=request.getAttribute("employeesRowCount") %>
-		EL->employees table row count : %{employees RowCount}
+		<li>
+			<a href="${pageContect.request.contectPath}/titles/getTitlesListDistinct">업무목록(중복 없음)</a>
+		</li>
+		<li>
+			<a href="${pageContect.request.contectPath}">연봉 통계값(count,sum,avg,max,min,std)</a>
+		</li>
 	</div>
 </body>
 </html>
